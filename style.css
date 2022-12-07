@@ -1,0 +1,395 @@
+/* custom properties */
+
+:root {
+	/* colors */
+	--clr-accent-100: #6adae6;
+	--clr-accent-300: #0071e3;
+	--clr-accent-400: hsl(12, 88%, 59%);
+	--clr-accent-500: hsl(12, 60%, 45%);
+
+	--clr-light-100: #fff;
+	--clr-light-200: #f5f5f7;
+
+	--clr-gray-300: #7e7e82;
+	--clr-gray-500: #424245;
+	--clr-gray-600: #2d2c26;
+	--clr-dark-900: #1d1d1f;
+	--clr-dark-600: rgba(0, 0, 0, 0.8);
+}
+
+/* ******************************************************************** */
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+/* Set core body defaults */
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ******************************************************************** */
+/* General Styling */
+
+* {
+	font-family: 'Work Sans', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* ******************************************************************** */
+
+/* Section 1 */
+
+.section-1 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--clr-accent-100);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	clip-path: polygon(100% 0, 100% 95%, 27% 100%, 0 100%, 0 0);
+}
+
+/* Logo */
+.logo {
+	position: absolute;
+	top: 3rem;
+	left: 3rem;
+}
+
+.logo i {
+	font-size: 4rem;
+	color: var(--clr-dark-600);
+}
+
+/* Navbar */
+.navbar {
+	position: absolute;
+	top: 3rem;
+	right: 10%;
+}
+
+.navbar-link {
+	font-size: 2rem;
+	display: inline-block;
+	margin: 0 3rem;
+	color: var(--clr-dark-900);
+	transition: transform .5s;
+}
+
+.navbar-link:hover {
+	transform: scale(1.2);
+}
+
+/* Banner */
+.section-1__banner {
+	flex-direction: column;
+}
+
+.section-1__banner h1 {
+	font-size: 10rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: .5rem;
+}
+
+.section-1__banner p {
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+	margin: 3rem 0 4rem 0;
+}
+
+.section-1__banner span {
+	font-size: 3rem;
+	margin-bottom: 5rem;
+}
+
+.section-1__banner button {
+	padding: 2rem 4rem;
+	font-size: 2rem;
+	background-color: var(--clr-dark-900);
+	color: var(--clr-accent-100);
+	font-weight: 400;
+	letter-spacing: .1rem;
+	border: none;
+	border-radius: .5rem;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.section-1__banner button:hover {
+	background-color: var(--clr-gray-600);
+	color: var(--clr-accent-100);
+	transform: scale(1.1);
+}
+
+/* slideshow */
+
+.slideshow {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.slideshow div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 5s;
+}
+
+.slideshow div.change {
+	opacity: 1;
+}
+
+/* The Apple Cube */
+
+.cube-wrapper {
+	perspective: 100rem;
+}
+.cube {
+	width: 30rem;
+	height: 55rem;
+	/* background-color: #1d1d1f; */
+	transform-style: preserve-3d;
+	transform: rotateY(21deg) rotateX(0) rotateZ(0);
+	position: relative;
+	top: -2rem;
+	transition: transform 1s;
+}
+
+.frontside {
+	width: 100%;
+	height: 100%;
+	padding: 2.5rem;
+	background-color: var(--clr-light-200);
+	transform: translateZ(5rem);
+	position: absolute;
+	padding: 2.5rem;
+	transform-style: preserve-3d;
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+
+.frontside::before {
+	content: "";
+	width: 100%;
+	height: 10rem;
+	background-color: var(--clr-light-200);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateX(-90deg);
+	transform-origin: top;
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+
+.frontside::after {
+	content: "";
+	width: 100%;
+	height: 10rem;
+	background-color: var(--clr-light-200);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: rotateX(90deg);
+	transform-origin: bottom;
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+
+.frontside img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.backside {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 2.5rem;
+	background-color: var(--clr-light-200);
+	transform: translateZ(-5rem);
+	transform-style: preserve-3d;
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+
+.backside::before {
+	content: "iPhone";
+	width: 10rem;
+	height: 100%;
+	background-color: var(--clr-light-200);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(-90deg);
+	transform-origin: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--clr-accent-100);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+.backside::after {
+	content: "iPhone";
+	width: 10rem;
+	height: 100%;
+	background-color: var(--clr-light-200);
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: rotateY(90deg);
+	transform-origin: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--clr-accent-100);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+}
+
+.backside i {
+	font-size: 10rem;
+	color: var(--clr-accent-100);
+	text-shadow: .1rem .1rem .2rem var(--clr-gray-300), -.1rem -.1rem -.2rem var(--clr-gray-300);
+	transform: rotateY(180deg);
+}
+
+/* Controls */
+.controls {
+	position: absolute;
+	bottom: -15rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10rem;
+	height: 10rem;
+	background-color: var(--clr-gray-600);
+	border-radius: 50%;
+	border: 1rem solid var(--clr-gray-600);
+}
+
+.controls a {
+	position: absolute;
+}
+
+.controls a:nth-child(1) {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.controls a:nth-child(2) {
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.controls a:nth-child(3) {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.controls a:nth-child(4) {
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+.controls a:nth-child(5) {
+	top: 10%;
+	right: 10%;
+	transform: rotate(45deg);
+}
+.controls a:nth-child(6) {
+	bottom: 10%;
+	left: 10%;
+	transform: rotate(45deg);
+}
+
+.controls i {
+	font-size: 1.5rem;
+	color: var(--clr-accent-100);
+	opacity: .5;
+	transition: all .5s;
+}
+
+.controls a:hover i {
+	opacity: 1;
+}
