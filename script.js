@@ -76,3 +76,11 @@ document.querySelector('.controls').addEventListener('mouseout', () => {
 	cubeRotating = true;
 	playCube();
 });
+
+// Section 3  progress bar when scrolling
+const macBookContent = document.querySelector('.section-3__content');
+window.addEventListener('scroll', () => {
+	if (window.pageYOffset + window.innerHeight >= macBookContent.offsetTop + macBookContent.offsetHeight / 2) {
+		macBookContent.classList.add('change');
+	}
+});
