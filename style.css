@@ -393,3 +393,143 @@ html {
 .controls a:hover i {
 	opacity: 1;
 }
+
+/* Section 2 */
+.section-2 {
+	width: 100%;
+	height: 120vh;
+	padding: 10vh 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.section-2__heading {
+	font-size: 6rem;
+	font-weight: 300;
+	color: var(--clr-dark-900);
+	position: relative;
+	margin-bottom: 5rem;
+	padding: 3rem;
+}
+
+.section-2__heading::after {
+	content: "";
+	width: 30vw;
+	height: 40vw;
+	background-image: linear-gradient(var(--clr-accent-100), var(--clr-light-100));
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: skewX(-40deg);
+	transform-origin: left top;
+	z-index: -1;
+	border-radius: 1rem;
+}
+
+.iphones {
+	height: 60vh;
+	width: 50vw;
+	background-image: linear-gradient(var(--clr-accent-100), var(--clr-light-100));
+	border-radius: .5rem;
+}
+
+.iphones img {
+	width: inherit;
+	height: inherit;
+	object-fit: contain;
+	position: absolute;
+	transition: all 4s;
+}
+
+.iphone-img__2 {
+	opacity: 0;
+}
+
+.iphones:hover .iphone-img__1 {
+	opacity: 0;
+}
+.iphones:hover .iphone-img__2 {
+	opacity: 1;
+}
+.iphone-btns {
+	display: flex;
+	margin-top: 5rem;
+}
+
+.iphone-btn {
+	width: 6rem;
+	height: 6rem;
+	position: relative;
+	background-image: linear-gradient(to right, rgb(51, 51, 51) 60%, rgb(82, 82, 82));
+	margin: 0 3rem;
+	border-radius: 50%;
+}
+
+.iphone-btn::after {
+	content: "";
+	width: 50%;
+	height: 50%;
+	display: block;
+	border: .1rem solid var(--clr-accent-100);
+	border-radius: 1rem;
+}
+
+.iphone-btn span {
+	position: absolute;
+	top: -3rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: var(--clr-accent-100);
+	width: max-content;
+	transform: scale(0);
+	transition: all .5s;
+}
+
+.iphone-btn:hover span {
+	transform: scale(1);
+}
+
+/* Section 3 */
+.section-3 {
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-dark-900);
+	flex-direction: column;
+	padding: 10rem 0;
+}
+
+.section-3__heading {
+	font-size: 10rem;
+	font-weight: 200;
+	color: var(--clr-accent-100);
+	margin-bottom: 10rem;
+}
+
+.section-3__content {
+	width: 80%;
+	flex-direction: column;
+	perspective: 1000rem;
+	position: relative;
+}
+
+.section-3__content img {
+	width: inherit;
+}
+
+.loading-wrapper {
+	position: absolute;
+	width: 60%;
+	height: 85%;
+	top: 6%;
+	background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)),
+		url(/imgs/MacBook/macbook-1-desktop.png) center no-repeat;
+	z-index: -1;
+}
+
+.macbook-info {
+	position: absolute;
+}
