@@ -95,7 +95,7 @@ const botoomControl = document.querySelector('.watch-control__bottom');
 const leftControl = document.querySelector('.watch-control__left');
 const rightControl = document.querySelector('.watch-control__right');
 
-document.querySelectorAll('.watch-control, controls a').forEach((control) => {
+document.querySelectorAll('.watch-control, .controls a, .iphone-btn').forEach((control) => {
 	control.addEventListener('click', (e) => {
 		e.preventDefault();
 	});

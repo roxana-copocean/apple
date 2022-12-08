@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="imgs/Icons/home-icon.png">
     <title>Apple</title>
 </head>
 <body>
     <div class="container">
         <!-- Section 1 -->
-        <section class="section-1">
+        <section class="section-1" id="section-1">
             <!-- logo -->
             <a href="#" class="logo">
                 <i class="fab fa-apple"></i>
@@ -21,10 +22,10 @@
 
             <!-- NavBar -->
             <nav class="navbar">
-                <a href="#" class="navbar-link">iPhone 14</a>
-                <a href="#" class="navbar-link">Mac</a>
-                <a href="#" class="navbar-link">Watch</a>
-                <a href="#" class="navbar-link">AirPods</a>
+                <a href="#section-2" class="navbar-link">iPhone 12</a>
+                <a href="#section-3" class="navbar-link">Mac</a>
+                <a href="#section-4" class="navbar-link">Watch</a>
+                <a href="#section-5" class="navbar-link">AirPods</a>
             </nav>
             <!-- End of NavBar -->
 
@@ -53,7 +54,7 @@
 
             <!-- Banner -->
             <div class="section-1__banner center">
-                <h1>&#8592;Best Gift</h1>
+                <h1>Best Gift</h1>
                 <p>"Creativity is just connecting things"</p>
                 <span> -Steve Jobs</span>
                 <button type="button">Buy Now</button>
@@ -69,7 +70,7 @@
         <!-- End of Section 1 -->
 
         <!-- Section 2 -->
-        <section class="section-2">
+        <section class="section-2" id="section-2">
             <h1 class="section-2__heading">iPhone 12</h1>
             <div class="iphones">
                 <img src="/imgs/iPhones/iphones-1-img.png" alt="iphone" class="iphone-img__1">
@@ -84,7 +85,7 @@
         <!-- End of Section 2 -->
 
         <!-- Section 3 -->
-        <section class="section-3 center">
+        <section class="section-3 center" id="section-3">
             <h1 class="section-3__heading">MacBook Air</h1>
             <div class="section-3__content center">
                 <img src="/imgs/MacBook/macbook-screen.png" alt="macbook" class="macbook-img-1">
@@ -106,7 +107,7 @@
         <!-- End Of Section 3 -->
 
         <!-- Section 4 -->
-        <section class="section-4 center">
+        <section class="section-4 center" id="section-4">
 
    
         <div class="watches center">
@@ -145,14 +146,42 @@
         <!-- End of Section 4 -->
 
         <!-- Section 5 -->
-        <section class="section-5">
-             <div class="airpods">
+        <section class="section-5 center" id="section-5">
+             <div class="airpods ">
                 <h1 class="section-5__heading">AirPods</h1>
-                <img src="/imgs/AirPods/airpods-1.png" alt="airpods">
-                <img src="/imgs/AirPods/airpods-2.png" alt="airpods">
+                <img src="/imgs/AirPods/airpods-1.png" class="airpods-img__1" alt="airpods">
+                <img src="/imgs/AirPods/airpods-2.png" class="airpods-img__2" alt="airpods">
+                <div class="airpods-buttons center">
+                    <button class="airpods-btn">Learn More</button>
+                    <button class="airpods-btn">Buy</button>
+                </div>
              </div>
         </section>
         <!-- End of Section 5 -->
+
+        <!-- Section 6 -->
+        <section class="section-6 center">
+            <div class="section-6__icons">
+                <a href="#section-2" class="icon-link">
+                    <img src="/imgs/Icons/iphone-icon.png" alt="">
+                </a>
+                <a href="#section-3" class="icon-link">
+                    <img src="/imgs/Icons/macbook-icon.png" alt="">
+                </a>
+                <a href="#section-4" class="icon-link">
+                    <img src="/imgs/Icons/watch-icon.png" alt="">
+                </a>
+                <a href="#section-5" class="icon-link">
+                    <img src="/imgs/Icons/airpods-icon.png" alt="">
+                </a>
+                <a href="#section-1" class="icon-link">
+                    <img src="/imgs/Icons/home-icon.png" alt="">
+                </a>
+            </div>
+            <p class="copyright">Copyright &copy; Roxana Copocean All Rights Reserved</p>
+        </section>
+        <!-- End of Section 6 -->
+
 
     </div>
 </body>
