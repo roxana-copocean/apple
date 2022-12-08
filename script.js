@@ -84,3 +84,60 @@ window.addEventListener('scroll', () => {
 		macBookContent.classList.add('change');
 	}
 });
+
+// section 4 watches
+let yDirection = 0;
+let xDirection = 0;
+const watchBands = document.querySelector('.watch-bands');
+const watchCases = document.querySelector('.watch-cases');
+const topControl = document.querySelector('.watch-control__top');
+const botoomControl = document.querySelector('.watch-control__bottom');
+const leftControl = document.querySelector('.watch-control__left');
+const rightControl = document.querySelector('.watch-control__right');
+
+document.querySelectorAll('.watch-control, controls a').forEach((control) => {
+	control.addEventListener('click', (e) => {
+		e.preventDefault();
+	});
+});
+const hideControls = () => {
+	if (yDirection === -280) {
+		topControl.classList.add('hide-controls');
+	} else {
+		topControl.classList.remove('hide-controls');
+	}
+	if (yDirection === 280) {
+		botoomControl.classList.add('hide-controls');
+	} else {
+		botoomControl.classList.remove('hide-controls');
+	}
+	if (xDirection === -280) {
+		leftControl.classList.add('hide-controls');
+	} else {
+		leftControl.classList.remove('hide-controls');
+	}
+	if (xDirection === 280) {
+		rightControl.classList.add('hide-controls');
+	} else {
+		rightControl.classList.remove('hide-controls');
+	}
+};
+
+topControl.addEventListener('click', () => {
+	watchCases.style.marginTop = `${(yDirection -= 70)}rem`;
+	console.log(yDirection);
+	hideControls();
+});
+botoomControl.addEventListener('click', () => {
+	watchCases.style.marginBottom = `${(yDirection += 70)}rem`;
+	hideControls();
+});
+leftControl.addEventListener('click', () => {
+	watchBands.style.marginRight = `${(xDirection -= 70)}rem`;
+
+	hideControls();
+});
+rightControl.addEventListener('click', () => {
+	watchBands.style.marginRight = `${(xDirection += 70)}rem`;
+	hideControls();
+});
