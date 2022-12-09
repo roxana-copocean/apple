@@ -4,11 +4,13 @@
 	/* colors */
 	--clr-accent-100: #6adae6;
 	--clr-accent-300: #0071e3;
-	--clr-accent-400: hsl(12, 88%, 59%);
-	--clr-accent-500: hsl(12, 60%, 45%);
+	--clr-accent-350: #0164c7;
+	--clr-accent-400: #f56300;
+	--clr-accent-500: #292039;
 
 	--clr-light-100: #fff;
 	--clr-light-200: #fbfbfb;
+	--clr-light-300: #efefef;
 
 	--clr-gray-200: #929296;
 	--clr-gray-300: #7e7e82;
@@ -17,6 +19,15 @@
 	--clr-dark-600: rgba(0, 0, 0, 0.8);
 	--clr-dark-900: #1d1d1f;
 	--clr-black: #000;
+
+	--gradient-colorful: linear-gradient(
+		90deg,
+		rgba(48, 161, 184, 1) 0%,
+		rgba(79, 153, 216, 1) 19%,
+		rgba(179, 115, 219, 1) 60%,
+		rgba(245, 87, 162, 1) 88%,
+		rgba(237, 65, 82, 1) 100%
+	);
 }
 
 /* ******************************************************************** */
@@ -97,6 +108,11 @@ picture {
 
 * {
 	font-family: 'Work Sans', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {
@@ -254,12 +270,13 @@ html {
 	width: 100%;
 	height: 100%;
 	padding: 2rem;
-	background-color: var(--clr-light-200);
+	background-color: var(--clr-light-300);
 	transform: translateZ(5rem);
 	position: absolute;
 	padding: 2.5rem;
 	transform-style: preserve-3d;
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 
 .frontside::before {
@@ -272,20 +289,22 @@ html {
 	left: 0;
 	transform: rotateX(-90deg);
 	transform-origin: top;
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 
 .frontside::after {
 	content: "";
 	width: 100%;
 	height: 10rem;
-	background-color: var(--clr-light-200);
+	background-color: var(--clr-light-300);
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	transform: rotateX(90deg);
 	transform-origin: bottom;
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 
 .frontside img {
@@ -299,17 +318,18 @@ html {
 	width: 100%;
 	height: 100%;
 	padding: 2.5rem;
-	background-color: var(--clr-light-200);
+	background-color: var(--clr-light-300);
 	transform: translateZ(-5rem);
 	transform-style: preserve-3d;
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 
 .backside::before {
 	content: "iPhone";
 	width: 10rem;
 	height: 100%;
-	background-color: var(--clr-light-200);
+	background-color: var(--clr-light-300);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -321,13 +341,14 @@ html {
 	font-size: 2rem;
 	font-weight: 300;
 	color: var(--clr-gray-500);
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 .backside::after {
 	content: "iPhone";
 	width: 10rem;
 	height: 100%;
-	background-color: var(--clr-light-200);
+	background-color: var(--clr-light-300);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -339,13 +360,14 @@ html {
 	font-size: 2rem;
 	font-weight: 300;
 	color: var(--clr-gray-500);
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-200), inset -.1rem -.1rem .1rem var(--clr-light-200);
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
 }
 
 .backside i {
 	font-size: 10rem;
-	color: var(--clr-black);
-	text-shadow: .1rem .1rem .2rem var(--clr-gray-300), -.1rem -.1rem -.2rem var(--clr-gray-300);
+	color: var(--clr-accent-500);
+	text-shadow: .1rem .1rem .2rem var(--clr-gray-500), -.1rem -.1rem -.2rem var(--clr-gray-300);
 	transform: rotateY(180deg);
 }
 
@@ -357,12 +379,27 @@ html {
 	transform: translateX(-50%);
 	width: 9rem;
 	height: 9rem;
-	background-color: var(--clr-gray-200);
+	/* background-color: var(--clr-gray-200); */
+	/* background: rgb(48, 161, 184);
+	background: linear-gradient(
+		90deg,
+		rgba(48, 161, 184, 1) 0%,
+		rgba(79, 153, 216, 1) 19%,
+		rgba(179, 115, 219, 1) 60%,
+		rgba(245, 87, 162, 1) 88%,
+		rgba(237, 65, 82, 1) 100%
+	); */
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.28);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+
 	border-radius: 50%;
-	border: 1rem solid var(--clr-gray-300);
+	border: 1rem solid transparent;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-		rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .controls a {
@@ -402,60 +439,76 @@ html {
 
 .controls i {
 	font-size: 1.5rem;
-
-	color: var(--clr-gray-500);
-
+	color: var(--clr-light-100);
+	opacity: .7;
 	transition: all .5s;
 	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .controls a:hover i {
 	color: var(--clr-black);
-	font-size: 1.7rem;
+	color: var(--clr-accent-500);
+	font-size: 1.6rem;
 }
 
+.top-z-control i {
+	font-size: .7rem;
+}
+.bottom-z-control i {
+	font-size: .7rem;
+}
 /* Section 2 */
 .section-2 {
 	width: 100%;
 	height: 120vh;
-	/* padding: 10vh 0; */
+	padding: 0 0 4rem 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	background: rgb(245, 245, 247);
-	background: linear-gradient(180deg, rgba(245, 245, 247, 1) 32%, rgba(106, 218, 230, 0.7716036243599003) 100%);
+	background-color: var(--clr-light-100);
 	border-top: 1.5rem solid var(--clr-light-100);
 	border-bottom: 1.5rem solid var(--clr-light-100);
+	padding-top: 4rem;
 }
 
+.new-iphone {
+	font-size: 1.9rem;
+	font-weight: 300;
+	color: var(--clr-gray-200);
+}
+
+.iphone-heading {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-top: 1.5rem;
+}
 .section-2__heading {
 	font-size: 5rem;
-	font-weight: 500;
-	color: var(--clr-gray-500);
+	font-weight: 600;
 	position: relative;
-	margin-bottom: 5rem;
-	padding: 1rem;
+	letter-spacing: -.1rem;
+	margin-bottom: 4rem;
+	/* padding: 1rem; */
+	background-color: #f3ec78;
+	background: linear-gradient(
+		90deg,
+		rgba(48, 161, 184, 1) 0%,
+		rgba(79, 153, 216, 1) 19%,
+		rgba(179, 115, 219, 1) 60%,
+		rgba(245, 87, 162, 1) 88%,
+		rgba(237, 65, 82, 1) 100%
+	);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
 }
-
-/* .section-2__heading::after {
-	content: "";
-	width: 30vw;
-	height: 40vw;
-	background-image: linear-gradient(var(--clr-accent-100), var(--clr-light-100));
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: skewX(-40deg);
-	transform-origin: left top;
-	z-index: -1;
-	border-radius: 1rem;
-} */
 
 .iphones {
 	height: 70vh;
 	width: 90vw;
-	/* background-image: linear-gradient(var(--clr-light-100), var(--clr-accent-100), #fff); */
 	border-radius: .5rem;
 }
 
@@ -465,6 +518,7 @@ html {
 	object-fit: contain;
 	position: absolute;
 	transition: all 4s;
+	padding-bottom: 3rem;
 }
 
 .iphone-img__2 {
@@ -479,16 +533,18 @@ html {
 }
 .iphone-btns {
 	display: flex;
-	margin-top: 5rem;
 }
 
 .iphone-btn {
 	width: 6rem;
 	height: 6rem;
 	position: relative;
+	top: 2rem;
+
 	background-image: linear-gradient(to right, rgb(51, 51, 51) 60%, rgb(82, 82, 82));
 	margin: 0 3rem;
 	border-radius: 50%;
+	transition: all 1s;
 }
 
 .iphone-btn::after {
@@ -498,16 +554,17 @@ html {
 	display: block;
 	border: .1rem solid var(--clr-accent-100);
 	border-radius: 1rem;
+	transition: all .5s;
 }
 
 .iphone-btn span {
 	position: absolute;
-	top: -4rem;
+	top: -3rem;
 	font-size: 1.4rem;
 	font-weight: 400;
 	/* text-transform: uppercase; */
 	letter-spacing: .1rem;
-	color: var(--clr-accent-100);
+	color: var(--clr-accent-300);
 	width: max-content;
 	transform: scale(0);
 	transition: all .5s;
@@ -517,21 +574,32 @@ html {
 	transform: scale(1);
 }
 
+.iphone-btn:hover::after {
+	background-color: var(--clr-gray-600);
+}
 /* Section 3 */
 .section-3 {
 	width: 100%;
 	height: 100%;
-	background-color: var(--clr-black);
+	background: rgb(41, 32, 57);
+	background: radial-gradient(circle, rgba(41, 32, 57, 1) 13%, rgba(0, 0, 0, 1) 100%);
 	flex-direction: column;
-	padding: 10rem 0;
+	padding: 7rem 0;
 	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
+.new {
+	font-size: 1.9rem;
+	font-weight: 500;
+	color: var(--clr-accent-400);
+}
+
 .section-3__heading {
-	font-size: 10rem;
-	font-weight: 200;
-	color: var(--clr-accent-100);
-	margin-bottom: 10rem;
+	font-size: 6rem;
+	font-weight: 500;
+	color: var(--clr-light-200);
+	margin-bottom: 6rem;
+	letter-spacing: -.4rem;
 }
 
 .section-3__content {
@@ -564,8 +632,8 @@ html {
 	width: 60%;
 	height: 85%;
 	top: 6%;
-	background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)),
-		url(/imgs/MacBook/macbook-1-desktop.png) center no-repeat;
+	/* background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(/imgs/2.jpeg) center no-repeat; */
+	background: url(/imgs/download.jpeg) center no-repeat;
 	z-index: -1;
 	opacity: 0;
 }
@@ -576,7 +644,8 @@ html {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: var(--clr-black);
+	background: rgb(41, 32, 57);
+	background: radial-gradient(circle, rgba(41, 32, 57, 1) 0%, rgba(0, 0, 0, 1) 100%);
 	flex-direction: column;
 }
 
@@ -617,32 +686,36 @@ html {
 }
 
 .macbook-info__heading {
-	font-size: 6rem;
+	font-size: 4rem;
 	font-weight: 400;
 	color: var(--clr-accent-100);
+	letter-spacing: -.2rem;
 }
 
 .macbook-price {
-	font-size: 2.5rem;
+	font-size: 2rem;
+	color: var(--clr-light-200);
 	font-weight: 200;
 	margin: 3rem 0;
 }
 
 .macbook-btn {
-	width: 25rem;
-	height: 5rem;
-	background-image: linear-gradient(var(--clr-light-200), var(--clr-light-100));
+	/* width: 25rem;
+	height: 5rem; */
+	padding: 1.5rem 4rem;
+	background-color: var(--clr-accent-300);
+
 	border: none;
-	border-radius: .5rem;
-	box-shadow: .1rem .1rem .1rem var(--clr-light-100), -.1rem -.1rem .1rem var(--clr-light-100);
+	border-radius: 4rem;
+	box-shadow: .1rem .1rem .1rem var(--clr-gray-500), -.1rem -.1rem .1rem var(--clr-gray-200);
 	font-size: 1.5rem;
 	font-weight: 500;
-	letter-spacing: .2rem;
-	color: var(--clr-accent-100);
+
+	color: var(--clr-light-200);
 	cursor: pointer;
 }
 .macbook-btn:hover {
-	color: var(--clr-gray-300);
+	background-color: var(--clr-accent-350);
 	transition: all .5s;
 }
 
@@ -659,7 +732,7 @@ html {
 /* Section 4 */
 .section-4 {
 	position: relative;
-	height: 140vh;
+	height: 100vh;
 	padding: 20vh 0;
 	flex-direction: column;
 	border-bottom: 1.5rem solid var(--clr-light-200);
