@@ -1,7 +1,7 @@
 // slideshow
 let counter = 1;
 const slideshowDivs = () => {
-	for (let i = 1; i <= 5; i++) {
+	for (let i = 1; i <= 4; i++) {
 		const div = document.createElement('div');
 		div.style.backgroundImage = `url(imgs/slideshow/section-1-bg-${i}.jpg)`;
 		i === 1 && div.classList.add('change');
