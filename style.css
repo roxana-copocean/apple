@@ -13,7 +13,7 @@
 	--clr-light-300: #efefef;
 
 	--clr-gray-200: #929296;
-	--clr-gray-300: #7e7e82;
+	--clr-gray-300: #a0a0a0;
 	--clr-gray-500: #424245;
 	--clr-gray-600: #2d2c26;
 	--clr-dark-600: rgba(0, 0, 0, 0.8);
@@ -275,8 +275,8 @@ html {
 	position: absolute;
 	padding: 2.5rem;
 	transform-style: preserve-3d;
-	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-200);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 
 .frontside::before {
@@ -290,7 +290,7 @@ html {
 	transform: rotateX(-90deg);
 	transform-origin: top;
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 
 .frontside::after {
@@ -304,7 +304,7 @@ html {
 	transform: rotateX(90deg);
 	transform-origin: bottom;
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 
 .frontside img {
@@ -322,7 +322,7 @@ html {
 	transform: translateZ(-5rem);
 	transform-style: preserve-3d;
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 
 .backside::before {
@@ -342,7 +342,7 @@ html {
 	font-weight: 300;
 	color: var(--clr-gray-500);
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 .backside::after {
 	content: "iPhone";
@@ -361,7 +361,7 @@ html {
 	font-weight: 300;
 	color: var(--clr-gray-500);
 	box-shadow: inset .1rem .1rem .1rem var(--clr-light-300), inset -.1rem -.1rem .1rem var(--clr-light-300);
-	box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+	box-shadow: rgba(50, 50, 93, 0.05) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px inset;
 }
 
 .backside i {
@@ -733,10 +733,83 @@ html {
 .section-4 {
 	position: relative;
 	height: 100vh;
-	padding: 20vh 0;
+	padding: 4vh 0;
+	/* margin-bottom: 5rem; */
 	flex-direction: column;
-	border-bottom: 1.5rem solid var(--clr-light-200);
+	/* border-bottom: rem solid var(--clr-light-200); */
 	border-top: 1.5rem solid var(--clr-light-200);
+}
+
+.section-4__header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-4__heading {
+	font-size: 4rem;
+	font-weight: 600;
+	text-align: center;
+	line-height: 5rem;
+	color: var(--clr-gray-900);
+}
+
+/* watch button */
+.watch-btn {
+	margin: 0 auto;
+	position: relative;
+	margin-top: 3rem;
+	padding: .8rem 2.5rem;
+	background-color: var(--clr-light-100);
+	border: none;
+	border-radius: 4rem;
+	/* box-shadow: .1rem .1rem .1rem var(--clr-gray-500), -.1rem -.1rem .1rem var(--clr-gray-200); */
+	font-size: 1.7rem;
+	font-weight: 700;
+	color: var(--clr-dark-900);
+	cursor: pointer;
+}
+
+.watch-btn:hover {
+	background-color: var(--clr-accent-350);
+	transition: all .5s;
+}
+
+/* gradient shadow */
+
+.watch-btn:before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-90deg, rgba(237, 65, 82, 1) 0%, rgba(179, 115, 219, 1) 99%);
+	transform: translate3d(0px, 0px, 0) scale(0.95);
+	filter: blur(.7rem);
+	opacity: var(0.7);
+	transition: opacity 0.3s;
+	border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.watch-btn::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: inherit;
+	border-radius: inherit;
 }
 
 .watch-band__img {
@@ -781,7 +854,7 @@ html {
 	color: var(--clr-accent-100);
 }
 .watch-control__top {
-	top: 22vh;
+	top: 35vh;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -791,7 +864,7 @@ html {
 	transform: translateY(-50%);
 }
 .watch-control__bottom {
-	bottom: 20vh;
+	bottom: 2vh;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -806,33 +879,12 @@ html {
 	visibility: hidden;
 }
 
-/* watch button */
-.watch-btn {
-	position: absolute;
-	bottom: 30vh;
-	right: 35%;
-	width: 13rem;
-	height: 5rem;
-	background-color: var(--clr-black);
-	color: var(--clr-accent-100);
-	border: .1rem dashed var(--clr-light-100);
-	border-radius: 4rem;
-	font-size: 1.6rem;
-	font-weight: 300;
-	cursor: pointer;
-	transition: all .5s;
-}
-
-.watch-btn:hover {
-	background-color: var(--clr-dark-900);
-	transform: scale(1.1);
-}
-
 /* Section 5 */
 .section-5 {
 	width: 100%;
 	height: 100vh;
 	background-color: var(--clr-light-200);
+	margin-top: 3rem;
 	border-bottom: 1.5rem solid var(--clr-light-100);
 }
 
@@ -845,13 +897,13 @@ html {
 
 .section-5__heading {
 	position: absolute;
-	top: 0;
+	top: -5rem;
 	left: 50%;
 	transform: translateX(-50%);
-	font-size: 15rem;
-	font-weight: 300;
+	font-size: 12rem;
+	font-weight: 400;
 	color: var(--clr-light-100);
-	text-shadow: .1rem .1rem 0 #999;
+	text-shadow: .07rem .07rem 0 var(--clr-gray-200);
 }
 
 .airpods-buttons {
